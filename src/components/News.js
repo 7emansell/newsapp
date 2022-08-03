@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { NewsContext } from "../newsContext";
 import Story from "./Story";
-import styles from '../styles.css';
 
 function News(props) {
   const { data } = useContext(NewsContext);
@@ -10,7 +9,7 @@ function News(props) {
   return (
     <div>
       <h1> News App 👋</h1>
-      <div className="allnews">
+      <div>
         {data
           ? data.articles.map((news) => (
               <Story data={news} key={news.url} />
