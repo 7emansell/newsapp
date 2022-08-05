@@ -8,16 +8,37 @@ import Link from "@mui/material/Link";
 function Story({ data }) {
   return (
     <Card
-      sx={{ margin: "15px", display: "flex", flexDirection: "row" }}
+      sx={{
+        margin: "15px",
+        display: "flex",
+        height: "300px",
+        flexDirection: "row",
+      }}
       variant="outlined"
     >
-      <CardContent>
+      <CardContent
+        sx={{
+          margin: "15px",
+          display: "flex",
+          height: "300px",
+          minWidth: 300,
+          flexDirection: "column",
+          overflow: "hidden",
+        }}
+      >
         <Typography variant="h1">
           <Link href={data.url} color="black" underline="hover">
             {data.title}
           </Link>
-        </Typography>
-        <Typography variant="p">{data.description}</Typography> <br />
+        </Typography>{" "}
+        <br />
+        <Typography
+          variant="p"
+          sx={{ display: { xs: "none", sm: "none", md: "block", lg: "block" } }}
+        >
+          {data.description}
+        </Typography>{" "}
+        <br />
         <Typography variant="p">
           By{" "}
           <Link href={data.url} color="black" underline="hover">
@@ -25,12 +46,33 @@ function Story({ data }) {
           </Link>
         </Typography>{" "}
         <br />
-        <Typography variant="time">
+        <Typography
+          variant="time"
+          sx={{
+            display: { xs: "none", sm: "block", md: "block", lg: "block" },
+          }}
+        >
           {" "}
           {data.publishedAt.split("T")[0]}
         </Typography>
       </CardContent>
-      <CardMedia component="img" height="300px" src={data.urlToImage} />
+      <div
+        style={{
+          float: "right",
+          height: "300px",
+          width: "300px",
+        }}
+      >
+        <CardMedia
+          component="img"
+          height="300px"
+          src={data.urlToImage}
+          sx={{
+            minWidth: "300px",
+            display: { xs: "none", sm: "block", md: "block", lg: "block" },
+          }}
+        />
+      </div>
     </Card>
   );
 }

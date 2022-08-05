@@ -10,7 +10,7 @@ export const NewsContextProvider = (props) => {
   useEffect(() => {
     axios
       .get(
-        `https://newsapi.org/v2/everything?domains=newyorker.com&apiKey=${API_KEY}`
+        `https://newsapi.org/v2/everything?domains=newyorker.com&apiKey=${API_KEY}&pageSize=10`
       )
       .then((response) => setData(response.data))
       .catch((error) => console.log(error));

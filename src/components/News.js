@@ -8,14 +8,10 @@ function News(props) {
   console.log(data);
 
   return (
-    <div>
-      <div
-        style={{ display: "flex", padding: "10px", flexDirection: "column" }}
-      >
-        {data
-          ? data.articles.map((news) => <Story data={news} key={news.url} />)
-          : "loading story..."}
-      </div>
+    <div style={{ display: "flex", padding: "10px", flexDirection: "column" }}>
+      {data
+        ? data.articles.map((news) => <Story data={news} key={news.url} />)
+        : "loading story..."}
     </div>
   );
 }
