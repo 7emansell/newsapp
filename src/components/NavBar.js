@@ -1,9 +1,14 @@
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
+import Link from "@mui/material/Link";
 import MenuIcon from "@mui/icons-material/Menu";
+import Typography from "@mui/material/Typography";
+
+function refreshPage() {
+  window.location.reload(false);
+}
 
 export default function NavBar() {
   return (
@@ -27,7 +32,9 @@ export default function NavBar() {
               display: "inline",
             }}
           >
-            The news
+            <Link onClick={refreshPage} color="white" underline="hover">
+              The news
+            </Link>
           </Typography>
         </div>
         <div

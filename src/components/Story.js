@@ -1,9 +1,9 @@
-import React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
 import CardMedia from "@mui/material/CardMedia";
 import Link from "@mui/material/Link";
+import React from "react";
+import Typography from "@mui/material/Typography";
 
 function Story({ data }) {
   return (
@@ -39,13 +39,23 @@ function Story({ data }) {
           {data.description}
         </Typography>{" "}
         <br />
-        <Typography variant="p">
-          By{" "}
-          <Link href={data.url} color="black" underline="hover">
-            {data.author}
-          </Link>
-        </Typography>{" "}
-        <br />
+        {data.author && (
+          <>
+            <Typography variant="p">
+              By{" "}
+              <Link
+                href={`https://www.newyorker.com/contributors/${
+                  data.author.split(" ")[0]
+                }-${data.author.split(" ")[1]}`}
+                color="black"
+                underline="hover"
+              >
+                {data.author}
+              </Link>
+            </Typography>
+            <br />
+          </>
+        )}
         <Typography
           variant="time"
           sx={{
@@ -63,15 +73,17 @@ function Story({ data }) {
           width: "300px",
         }}
       >
-        <CardMedia
-          component="img"
-          height="300px"
-          src={data.urlToImage}
-          sx={{
-            minWidth: "300px",
-            display: { xs: "none", sm: "block", md: "block", lg: "block" },
-          }}
-        />
+        {data.urlToImage && (
+          <CardMedia
+            component="img"
+            height="300px"
+            src={data.urlToImage}
+            sx={{
+              minWidth: "300px",
+              display: { xs: "none", sm: "block", md: "block", lg: "block" },
+            }}
+          />
+        )}
       </div>
     </Card>
   );
