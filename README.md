@@ -31,4 +31,4 @@ The site displays a nav bar, a footer, and cards for each story that include an 
 I also added [pagination](https://www.npmjs.com/package/react-paginate).
 
 ## Next steps
-Given more time to work on this, I would add a search bar and functionality to the links in the nav bar. I would also tighten up the styling across the board and break down the main page of the app into more distinct components. 
+Given more time to work on this, I would add a search bar, functionality to the links in the nav bar, and testing. I would also tighten up the styling across the board and break down the main page of the app into more distinct components. 
