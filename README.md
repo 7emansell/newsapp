@@ -1,6 +1,6 @@
-# _The New Yorker_ Technical Test (Emma Mansell)
+# News App
 
-Welcome to my technical test! This is a simple React app that renders a front-end client and interacts with NewsAPI. 
+This is a simple React app that renders a front-end client and interacts with NewsAPI. 
 
 ## Setting it up
 
