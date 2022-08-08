@@ -28,7 +28,7 @@ The site should run locally at http://localhost:8080/.
 ## What's included
 The site displays a nav bar, a footer, and cards for each story that include an image, title, and description. Each story links to itself on [The New Yorker](newyorker.com), and the byline links to the author's contributor page. The site is mobile responsive, and designed in Material UI.  
 
-I also added [pagination](https://www.npmjs.com/package/react-paginate) and some back-end testing with Jest.
+I also added [pagination](https://www.npmjs.com/package/react-paginate).
 
 ## Next steps
 Given more time to work on this, I would add a search bar and functionality to the links in the nav bar. I would also tighten up the styling across the board and break down the main page of the app into more distinct components. 
